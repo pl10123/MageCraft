@@ -1,0 +1,16 @@
+[
+{
+  "modid": "magecraft",
+  "name": "MageCraft",
+  "description": "A minecraft mod about magic and stuff.",
+  "version": "$0.1s",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["pl10123"],
+  "credits": "The Forge and FML guys, for making forge.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
