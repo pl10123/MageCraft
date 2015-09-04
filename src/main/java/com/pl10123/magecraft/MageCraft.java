@@ -1,31 +1,59 @@
 package com.pl10123.magecraft;
 
+import com.pl10123.magecraft.handler.ConfigHandler;
+import com.pl10123.magecraft.init.ModBlocks;
+import com.pl10123.magecraft.init.ModItems;
+import com.pl10123.magecraft.proxy.IProxy;
+import com.pl10123.magecraft.reference.Reference;
+import com.pl10123.magecraft.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid="magecraft", name="MageCraft", version="1.7.10-0.1")
-public class MageCraft {
 
-    @Mod.Instance("magecraft")
-    public MageCraft instance;
+@Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY)
+public class MageCraft
+{
+
+    @Mod.Instance(Reference.MOD_ID)
+    public static MageCraft instance;
+
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
+    public static IProxy proxy;
+
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent e){
+    public void preInit(FMLPreInitializationEvent e)
+    {
 
+        //Load Configuration Stuff (including some handler thing for config gui screen)
+        ConfigHandler.init(e.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigHandler());
+
+        ModItems.init();
+        ModBlocks.init();
+
+        //Finish pre-init :p
+        LogHelper.info("Pre init Complete!");
     }
 
 
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent e){
 
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent e)
+    {
+        LogHelper.info("Init Complete!");
     }
 
 
-    @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent e){
 
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent e)
+    {
+        LogHelper.info("Post init Complete!");
     }
 
 }
