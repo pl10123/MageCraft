@@ -1,19 +1,18 @@
 package com.pl10123.magecraft.item;
 
-import com.pl10123.magecraft.creativetab.MageCraftTab;
+
 import com.pl10123.magecraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
 
-public class ItemMageCraft extends Item {
+public class ItemBucketMageCraft extends ItemBucket{
 
-    public ItemMageCraft()
-    {
-        super();
-        this.setCreativeTab(MageCraftTab.MageCraftTab);
+    public ItemBucketMageCraft(Block block) {
+        super(block);
     }
 
     @Override
@@ -35,6 +34,5 @@ public class ItemMageCraft extends Item {
     protected String getUnwrappedUnlocalizedName(String unlocalizedName){
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
-
 
 }

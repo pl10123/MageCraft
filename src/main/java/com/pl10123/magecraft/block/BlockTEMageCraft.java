@@ -1,21 +1,21 @@
 package com.pl10123.magecraft.block;
 
+import com.pl10123.magecraft.creativetab.MageCraftTab;
 import com.pl10123.magecraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 
 
-public class BlockTEMageCraft extends BlockContainer
+public abstract class BlockTEMageCraft extends BlockContainer
 {
 
     public BlockTEMageCraft(Material material)
     {
         super(material);
+        this.setCreativeTab(MageCraftTab.MageCraftTab);
     }
 
     public BlockTEMageCraft()
@@ -41,10 +41,5 @@ public class BlockTEMageCraft extends BlockContainer
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 
-    @Override
-    public TileEntity createNewTileEntity(World world, int metaData)
-    {
-        return null;
-    }
 
 }

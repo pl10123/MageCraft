@@ -1,8 +1,11 @@
 package com.pl10123.magecraft;
 
+import com.pl10123.magecraft.handler.BucketHandler;
 import com.pl10123.magecraft.handler.ConfigHandler;
 import com.pl10123.magecraft.init.ModBlocks;
+import com.pl10123.magecraft.init.ModFluids;
 import com.pl10123.magecraft.init.ModItems;
+import com.pl10123.magecraft.item.guide.MainGuide;
 import com.pl10123.magecraft.proxy.IProxy;
 import com.pl10123.magecraft.reference.Reference;
 import com.pl10123.magecraft.utility.LogHelper;
@@ -12,6 +15,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 
 @Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY)
@@ -33,8 +37,14 @@ public class MageCraft
         ConfigHandler.init(e.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
 
+        ModFluids.initFluids();
         ModItems.init();
         ModBlocks.init();
+        MainGuide.initMainGuide();
+
+        //Register All Handlers
+        BucketHandler.INSTANCE.buckets.put(ModBlocks.blockManaFluid, ModItems.manaBucket);
+        MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
 
         //Finish pre-init :p
         LogHelper.info("Pre init Complete!");

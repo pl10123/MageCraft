@@ -1,6 +1,7 @@
 package com.pl10123.magecraft.block;
 
-import com.pl10123.magecraft.creativetab.CreativeTabMageCraft;
+
+import com.pl10123.magecraft.creativetab.MageCraftTab;
 import com.pl10123.magecraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,7 +16,7 @@ public class BlockMageCraft extends Block
     public BlockMageCraft(Material material)
     {
         super(material);
-        this.setCreativeTab(CreativeTabMageCraft.MageCraftTab);
+        this.setCreativeTab(MageCraftTab.MageCraftTab);
     }
 
     public BlockMageCraft()

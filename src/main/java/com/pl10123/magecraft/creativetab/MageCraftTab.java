@@ -6,6 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
+
 public class MageCraftTab
 {
     public static final CreativeTabs MageCraftTab = new CreativeTabs(Reference.MOD_NAME) {
@@ -13,7 +14,6 @@ public class MageCraftTab
         {
             return Items.diamond;
         }
-
     };
 
 

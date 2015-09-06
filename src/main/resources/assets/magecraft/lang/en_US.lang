@@ -1,1 +1,20 @@
+##Blocks
+
+
+
+##Items (Test Item is not used and does not have to be localized)
 item.magecraft:testItem.name=Test Item Thingy of Crummy Texture
+item.magecraft:manaBucket.name=Mana Bucket
+
+
+
+##Guide
+magecraft.guide.title=Mage's Manual
+magecraft.guide.welcome=Welcome young mage. You have discovered the secret guide to the secret art of MageCraft. Read through this and become the most powerful mage off all time. Learn to cast destructive spells and create amazing potions to aid you in combat.
+magecraft.guide.cat.intro=Introduction
+magecraft.guide.intro.entry1.name=Basic Information
+magecraft.guide.intro.entry1.page1=Welcome young apprentice, if you are reading this then you are one step closer to becoming an elite mage. But that requires time. So let's start with the basics. The first thing you want to learn is the basics of mana.
+magecraft.guide.intro.entry2.name=Mana
+magecraft.guide.intro.entry2.page1=Mana as you should already know is the fuel of all magic. It is stored in mana banks in a location that should only be known to the owner. The reason for that is that it is fairly simple for one to steal it. However, generating mana is no simple tasks, as you will soon find out. The basic mana generation system is too slow for even the most patient to wait for.
+magecraft.guide.intro.entry3.name=The First Steps
+magecraft.guide.intro.entry3.page1=If you've come this far then it means that you really want to be a mage. OK, you will. It's going to be a long road filled with death and explosions, but if you really want to just read on. The first thing you want to do is make your basic mana bank. It will store a little amount of mana but will be sufficient, for now...
