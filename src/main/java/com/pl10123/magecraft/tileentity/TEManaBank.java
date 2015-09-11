@@ -6,8 +6,8 @@ public class TEManaBank extends TileEntityMageCraft {
     private static int Storage = 0;
     private static int tier;
 
-    public TEManaBank(int meta){
-        this.tier = meta;
+    public TEManaBank(){
+        this.tier = 1; //This is temporary. Hopefully...
     }
 
 }

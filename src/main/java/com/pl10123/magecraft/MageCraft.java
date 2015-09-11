@@ -55,6 +55,7 @@ public class MageCraft
     @Mod.EventHandler
     public void init(FMLInitializationEvent e)
     {
+        proxy.registerRenderStuff();
         LogHelper.info("Init Complete!");
     }
 
