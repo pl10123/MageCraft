@@ -13,7 +13,6 @@ public class ModelManaBank extends ModelBase
     ModelRenderer StandFront;
     ModelRenderer StandBack;
     ModelRenderer MainTank;
-    ModelRenderer OutputCube;
     ModelRenderer ProtectorL;
     ModelRenderer ProtectorR;
     ModelRenderer ProtectorB;
@@ -58,12 +57,6 @@ public class ModelManaBank extends ModelBase
       MainTank.setTextureSize(64, 32);
       MainTank.mirror = true;
       setRotation(MainTank, 0F, 0F, 0F);
-      OutputCube = new ModelRenderer(this, 0, 0);
-      OutputCube.addBox(0F, 0F, 0F, 2, 1, 2);
-      OutputCube.setRotationPoint(-1F, 23F, -1F);
-      OutputCube.setTextureSize(64, 32);
-      OutputCube.mirror = true;
-      setRotation(OutputCube, 0F, 0F, 0F);
       ProtectorL = new ModelRenderer(this, 0, 0);
       ProtectorL.addBox(0F, 0F, 0F, 1, 14, 2);
       ProtectorL.setRotationPoint(6F, 9F, -1F);
@@ -124,7 +117,6 @@ public class ModelManaBank extends ModelBase
     StandFront.render(f5);
     StandBack.render(f5);
     MainTank.render(f5);
-    OutputCube.render(f5);
     ProtectorL.render(f5);
     ProtectorR.render(f5);
     ProtectorB.render(f5);

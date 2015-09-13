@@ -11,7 +11,13 @@ public class BlockManaBank extends BlockTEMageCraft {
     public BlockManaBank(){
         super(Material.glass);
         this.setBlockName("manaBank");
+        this.setHarvestLevel("pickaxe", 1);
+        this.setHardness(0.7F);
+
+       // this.setBlockBounds();
     }
+
+
 
     @Override
     public boolean isOpaqueCube() {

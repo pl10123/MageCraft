@@ -22,7 +22,7 @@ public class TileEntityRendererManaBank extends TileEntitySpecialRenderer{
             TEManaBank teManaBank = (TEManaBank) te;
 
             GL11.glPushMatrix();
-            GL11.glTranslatef(((float) x) + 0.5F  , ((float) y) - 0.4F, ((float) z) + 0.5F);
+            GL11.glTranslatef(((float) x) + 0.5F  , ((float) y) - 0.5F, ((float) z) + 0.5F);
             ResourceLocation resourceLocation = new ResourceLocation(Reference.MOD_ID + ":" + "models/ManaBankTexture.png");
             FMLClientHandler.instance().getClient().getTextureManager().bindTexture(resourceLocation);
 
