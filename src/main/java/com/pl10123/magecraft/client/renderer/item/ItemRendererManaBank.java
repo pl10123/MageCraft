@@ -56,7 +56,7 @@ public class ItemRendererManaBank implements IItemRenderer{
 
         float translateX =  x + 1.0F;
         float translateY =  y - 0.1F;
-        float translateZ =  z;
+        float translateZ =  z ;
 
         GL11.glScalef(1F, 1F, 1F);
         GL11.glTranslatef(translateX, translateY, translateZ);
