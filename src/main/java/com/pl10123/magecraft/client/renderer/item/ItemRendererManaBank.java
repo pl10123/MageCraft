@@ -41,7 +41,7 @@ public class ItemRendererManaBank implements IItemRenderer{
             {
                 renderManaBank(0.0F, 0.0F, 1.0F);
                 return;
-            }
+             }
             case INVENTORY:
             {
                 renderManaBank(-1.0F, -0.9F, 0.0F);
