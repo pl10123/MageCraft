@@ -2,7 +2,6 @@ package cofh.lib.util;
 
 import com.google.common.base.Throwables;
 import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.BiMap;
 import com.google.common.collect.Multimap;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -39,10 +38,10 @@ public class RegistryUtils {
 		private static void overwrite_do(RegistryNamespaced registry, String name, Object object, Object oldThing) {
 
 			int id = registry.getIDForObject(oldThing);
-			BiMap map = ((BiMap) registry.registryObjects);
-			registry.underlyingIntegerMap.func_148746_a(object, id);
-			map.remove(name);
-			map.forcePut(name, object);
+			//BiMap map = ((BiMap) registry.field_148758_b);
+			//registry.underlyingIntegerMap.func_148746_a(object, id);
+			//map.remove(name);
+			//map.forcePut(name, object);
 		}
 
 		private static void alterDelegateChain(RegistryNamespaced registry, String id, Object object) {
